@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e055335f568d24e8f9db5423ae16f6, type: 3}
+  m_Name: UpgradeTypeVisual
+  m_EditorClassIdentifier: 
+  upgradeTypeName: Visual
+  upgradeTypeDescription: Affects the visual appearance of an upgrade part. "Natural"
+    Human looks.
+  upgradeTypeIcon: {fileID: 0}
