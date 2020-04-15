@@ -15,7 +15,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 121aeac5a67460149a55145f2ff4bd71, type: 2}
+    - {fileID: 11400000, guid: b6f41aaf48a390a4888f85ead9310253, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -107,12 +109,317 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: techBranchCost
+      Entry: 7
+      Data: 2|UnityEngine.Rendering.SerializedDictionary`2[[TechBranch, Assembly-CSharp],[UnityEngine.AnimationCurve,
+        UnityEngine.CoreModule]], Unity.RenderPipelines.Core.Runtime
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.ObjectEqualityComparer`1[[TechBranch, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 4|UnityEngine.AnimationCurve, UnityEngine.CoreModule
+    - Name: 
+      Entry: 7
+      Data: 5|UnityEngine.Keyframe[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
+    - Name: ver
+      Entry: 3
+      Data: 1
+    - Name: m_Time
+      Entry: 4
+      Data: 0
+    - Name: m_Value
+      Entry: 4
+      Data: 0
+    - Name: m_InTangent
+      Entry: 4
+      Data: 0
+    - Name: m_OutTangent
+      Entry: 4
+      Data: 0
+    - Name: m_TangentMode
+      Entry: 3
+      Data: 0
+    - Name: m_WeightedMode
+      Entry: 3
+      Data: 0
+    - Name: m_InWeight
+      Entry: 4
+      Data: 0
+    - Name: m_OutWeight
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
+    - Name: ver
+      Entry: 3
+      Data: 1
+    - Name: m_Time
+      Entry: 4
+      Data: 1
+    - Name: m_Value
+      Entry: 4
+      Data: 300
+    - Name: m_InTangent
+      Entry: 4
+      Data: 53.3982162
+    - Name: m_OutTangent
+      Entry: 4
+      Data: 53.3982162
+    - Name: m_TangentMode
+      Entry: 3
+      Data: 0
+    - Name: m_WeightedMode
+      Entry: 3
+      Data: 0
+    - Name: m_InWeight
+      Entry: 4
+      Data: 0.333333343
+    - Name: m_OutWeight
+      Entry: 4
+      Data: 0.333333343
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
+    - Name: ver
+      Entry: 3
+      Data: 1
+    - Name: m_Time
+      Entry: 4
+      Data: 10
+    - Name: m_Value
+      Entry: 4
+      Data: 2000
+    - Name: m_InTangent
+      Entry: 4
+      Data: 0
+    - Name: m_OutTangent
+      Entry: 4
+      Data: 0
+    - Name: m_TangentMode
+      Entry: 3
+      Data: 0
+    - Name: m_WeightedMode
+      Entry: 3
+      Data: 0
+    - Name: m_InWeight
+      Entry: 4
+      Data: 0
+    - Name: m_OutWeight
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 6|UnityEngine.AnimationCurve, UnityEngine.CoreModule
+    - Name: 
+      Entry: 7
+      Data: 7|UnityEngine.Keyframe[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
+    - Name: ver
+      Entry: 3
+      Data: 1
+    - Name: m_Time
+      Entry: 4
+      Data: 0
+    - Name: m_Value
+      Entry: 4
+      Data: 0
+    - Name: m_InTangent
+      Entry: 4
+      Data: 0
+    - Name: m_OutTangent
+      Entry: 4
+      Data: 0
+    - Name: m_TangentMode
+      Entry: 3
+      Data: 0
+    - Name: m_WeightedMode
+      Entry: 3
+      Data: 0
+    - Name: m_InWeight
+      Entry: 4
+      Data: 0
+    - Name: m_OutWeight
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
+    - Name: ver
+      Entry: 3
+      Data: 1
+    - Name: m_Time
+      Entry: 4
+      Data: 1
+    - Name: m_Value
+      Entry: 4
+      Data: 100
+    - Name: m_InTangent
+      Entry: 4
+      Data: 53.3982162
+    - Name: m_OutTangent
+      Entry: 4
+      Data: 53.3982162
+    - Name: m_TangentMode
+      Entry: 3
+      Data: 0
+    - Name: m_WeightedMode
+      Entry: 3
+      Data: 0
+    - Name: m_InWeight
+      Entry: 4
+      Data: 0.333333343
+    - Name: m_OutWeight
+      Entry: 4
+      Data: 0.333333343
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: UnityEngine.Keyframe, UnityEngine.CoreModule
+    - Name: ver
+      Entry: 3
+      Data: 1
+    - Name: m_Time
+      Entry: 4
+      Data: 10
+    - Name: m_Value
+      Entry: 4
+      Data: 1000
+    - Name: m_InTangent
+      Entry: 4
+      Data: 0
+    - Name: m_OutTangent
+      Entry: 4
+      Data: 0
+    - Name: m_TangentMode
+      Entry: 3
+      Data: 0
+    - Name: m_WeightedMode
+      Entry: 3
+      Data: 0
+    - Name: m_InWeight
+      Entry: 4
+      Data: 0
+    - Name: m_OutWeight
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: techUpgradesCost
+      Entry: 7
+      Data: 8|UnityEngine.Rendering.SerializedDictionary`2[[TechUpgrade, Assembly-CSharp],[System.Int32,
+        mscorlib]], Unity.RenderPipelines.Core.Runtime
+    - Name: comparer
+      Entry: 7
+      Data: 9|System.Collections.Generic.ObjectEqualityComparer`1[[TechUpgrade, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   setupName: Default Game Setup
   setupDescription: 
   resTechUpgradesPath: ScriptableObjects/TechUpgrades
   resTechUpgradeCategoriesPath: ScriptableObjects/TechUpgradeCategories
   resTechUpgradesTypesPath: ScriptableObjects/TechUpgradeTypes
   resTechBranchesPath: ScriptableObjects/TechBranches
+  resUpgradePartsPath: ScriptableObjects/UpgradeParts
   populationGrowthCurve:
     serializedVersion: 2
     m_Curve:
@@ -137,7 +444,26 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  maxTimePhases: 10
+  budgetPerPhase: 10000
+  canTakeOverLeftBudget: 1
+  timePhaseStartYear: 2020
+  timePhaseDuration: 10
   techUpgrades: []
-  techUpgradeCategories: []
-  techUpgradeTypes: []
-  techBranches: []
+  techUpgradeCategories:
+  - {fileID: 11400000, guid: 6a84d799fc9c7594c90a8d08d6a649fd, type: 2}
+  - {fileID: 11400000, guid: 8b3c88a848c4a3d418030ce502da458c, type: 2}
+  - {fileID: 11400000, guid: 06529e576c0c7df48ab0c795f3f46996, type: 2}
+  - {fileID: 11400000, guid: b2d422e99724eda4aa2b4164194b59b3, type: 2}
+  techUpgradeTypes:
+  - {fileID: 11400000, guid: 5b473a8bca8c2c04a8214dcea9f20ba3, type: 2}
+  - {fileID: 11400000, guid: df999851d9d36e34aa036876f93cc405, type: 2}
+  - {fileID: 11400000, guid: 0312f28ea913ad440ae55027685ef5fc, type: 2}
+  techBranches:
+  - {fileID: 11400000, guid: 121aeac5a67460149a55145f2ff4bd71, type: 2}
+  - {fileID: 11400000, guid: b6f41aaf48a390a4888f85ead9310253, type: 2}
+  upgradeParts:
+  - {fileID: 11400000, guid: 4a5064a544ad13a4f82a147f25be6dad, type: 2}
+  - {fileID: 11400000, guid: 119e1d98bb01ff743b35517638067d05, type: 2}
+  - {fileID: 11400000, guid: 09bb8231ca43b0f41806a54864f2880f, type: 2}
+  maxTechBranchLevel: 10

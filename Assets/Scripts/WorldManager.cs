@@ -7,10 +7,12 @@ public class WorldManager : MonoBehaviour
 {
     public GameSetupData gameSetupData;
     public Player player;
+
+    public UIManager uiManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        uiManager = GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -30,5 +32,9 @@ public class WorldManager : MonoBehaviour
         }
         player.gameSetupData = gameSetupData;
         player.InitData();
+        
+        uiManager?.InitUI();
+        
+        player?.AdvanceToNextTimePeriod();
     }
 }

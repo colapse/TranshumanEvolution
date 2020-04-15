@@ -12,22 +12,26 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgradeCategory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIBudgetBarController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechBranch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.1.0a23/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITimePhaseBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITechBranchesTabController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TranshumanCategory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechBranch.cs" />
@@ -35,12 +39,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WorldManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WorldManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechBranchesTabController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIBudgetBarController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITimePhaseBar.cs" />
       </list>
     </option>
   </component>
@@ -93,6 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586891977738</updated>
       <workItem from="1586891986299" duration="11096000" />
+      <workItem from="1586941270957" duration="19851000" />
     </task>
     <servers />
   </component>
@@ -106,7 +116,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
