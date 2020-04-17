@@ -45,7 +45,10 @@
             <e p="UIBudgetBarController.cs" t="Include" />
             <e p="UIMainMenuController.cs" t="Include" />
             <e p="UITechBranchesTabController.cs" t="Include" />
+            <e p="UITechUpgradeController.cs" t="Include" />
+            <e p="UITechUpgradesTabController.cs" t="Include" />
             <e p="UITimePhaseBar.cs" t="Include" />
+            <e p="UIUpgradeTypeController.cs" t="Include" />
           </e>
           <e p="UIManager.cs" t="Include" />
           <e p="UpgradePart.cs" t="Include" />

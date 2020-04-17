@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public event Action MoneySpentEvent;
     public event Action<TechBranch> TechBranchPointIncreasedEvent;
     public event Action<TimePeriod> TimePeriodChangedEvent;
+    public event Action<TechUpgrade> NewTechUpgradeResearchedEvent;
     
     public GameSetupData gameSetupData;
     
@@ -91,6 +92,7 @@ public class Player : MonoBehaviour
         if (SpendMoney(cost))
         {
             techUpgrades.Add(techUpgrade);
+            NewTechUpgradeResearchedEvent?.Invoke(techUpgrade);
             return true;
         }
         
@@ -128,6 +130,12 @@ public class Player : MonoBehaviour
             }
         }
         //transhuman?.UpdateActiveUpgradeParts();
+    }
+
+    public int GetCurrentTechBranchLevel(TechBranch techBranch)
+    {
+        if (techBranchLevels == null || !techBranchLevels.ContainsKey(techBranch)) return 0;
+        return techBranchLevels[techBranch];
     }
 
     public string GetCurrencyString(int amount)

@@ -21,7 +21,8 @@ public class UIManager : MonoBehaviour
     [FoldoutGroup("Tabs Setup")] public Button buttonReportTab;
     [FoldoutGroup("Tabs Setup")] public Button buttonHelpTab;
     
-    [FoldoutGroup("Tabs Setup")] private UITechBranchesTabController branchesTabController;
+    private UITechBranchesTabController branchesTabController;
+    private UITechUpgradesTabController upgradesTabController;
     
     [FoldoutGroup("Top Bar Setup")] public GameObject timePhaseBarPrefab;
     [FoldoutGroup("Top Bar Setup")] public GameObject budgetProgressBarPrefab;
@@ -98,9 +99,17 @@ public class UIManager : MonoBehaviour
         {
             var brachnesTabGo = Instantiate(branchesTabPrefab,tabsContainer.transform);
             branchesTabController = brachnesTabGo?.GetComponent<UITechBranchesTabController>();
-            branchesTabController.gameObject.SetActive(false);
+            brachnesTabGo?.SetActive(false);
             buttonBranchesTab?.onClick.AddListener(ShowBranchesTab);
             
+        }
+
+        if (upgradesTabPrefab != null)
+        {
+            var tabGo = Instantiate(upgradesTabPrefab,tabsContainer.transform);
+            upgradesTabController = tabGo?.GetComponent<UITechUpgradesTabController>();
+            tabGo?.SetActive(false);
+            buttonUpgradesTab?.onClick.AddListener(ShowUpgradesTab);
         }
         
         // TODO Other
@@ -110,9 +119,10 @@ public class UIManager : MonoBehaviour
 
     public void ShowBranchesTab()
     {
-        if(branchesTabController != null)
-            branchesTabController.gameObject.SetActive(true);
+        branchesTabController?.gameObject.SetActive(true);
+        
         // TODO Hide otherpanels
+        upgradesTabController?.gameObject.SetActive(false);
     }
 
     public void ShowPartsTab()
@@ -122,7 +132,10 @@ public class UIManager : MonoBehaviour
 
     public void ShowUpgradesTab()
     {
+        upgradesTabController?.gameObject.SetActive(true);
+        
         // TODO Hide otherpanels
+        branchesTabController?.gameObject.SetActive(false);
     }
 
     public void ShowReportTab()
