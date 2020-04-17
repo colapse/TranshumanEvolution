@@ -16,3 +16,4 @@ MonoBehaviour:
   categoryDescription: 
   categoryIcon: {fileID: 0}
   topCategory: {fileID: 0}
+  techUpgradeSkillTreePrefab: {fileID: 6035449588065844922, guid: 90bbbd4102044ac4d8feb143aee7eadc, type: 3}

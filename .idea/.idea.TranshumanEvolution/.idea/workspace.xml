@@ -37,7 +37,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/TranshumanCategory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechBranch.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeCategory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" />
@@ -51,11 +50,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITimePhaseBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIUpgradeTypeController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradeController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeCategory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" />
       </list>
     </option>
   </component>
@@ -110,6 +110,7 @@
       <workItem from="1586891986299" duration="11096000" />
       <workItem from="1586941270957" duration="19851000" />
       <workItem from="1587066816494" duration="5382000" />
+      <workItem from="1587114746199" duration="2765000" />
     </task>
     <servers />
   </component>

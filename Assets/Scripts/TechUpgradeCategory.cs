@@ -7,4 +7,6 @@ public class TechUpgradeCategory : ScriptableObject
     public string categoryDescription;
     public Sprite categoryIcon;
     public TechUpgradeCategory topCategory;
+
+    public GameObject techUpgradeSkillTreePrefab;
 }
