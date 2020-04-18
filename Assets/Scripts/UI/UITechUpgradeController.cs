@@ -82,6 +82,7 @@ namespace UI
             // Upgrade Types
             if (techUpgrade.upgradeTypes != null && upgradeTypePrefab != null && upgradeTypeBar != null)
             {
+                // Destroy existing children
                 if (upgradeTypeBar.transform.childCount > 0)
                 {
                     for (int i = 0; i < upgradeTypeBar.transform.childCount; i++)
@@ -90,6 +91,7 @@ namespace UI
                     }
                 }
                 
+                // Instantiate UpgradeTypes indicators
                 foreach (var upgradeTypeKVP in techUpgrade.upgradeTypes)
                 {
                     GameObject go = Instantiate(upgradeTypePrefab, upgradeTypeBar.transform);
@@ -100,6 +102,7 @@ namespace UI
                 }
             }
 
+            // Set Border Color
             if (borderImage != null)
             {
                 if (_player.techUpgrades.Contains(techUpgrade))

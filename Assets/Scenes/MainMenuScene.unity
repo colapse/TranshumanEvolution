@@ -1142,7 +1142,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   currentSceneView: 0
-  gameSetupData: {fileID: 0}
+  gameSetupData: {fileID: 11400000, guid: 6361c0cc8c7a13d4bba4ca5baa48ee80, type: 2}
 --- !u!4 &2101523732
 Transform:
   m_ObjectHideFlags: 0

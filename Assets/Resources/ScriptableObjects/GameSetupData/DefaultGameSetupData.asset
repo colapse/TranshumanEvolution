@@ -459,7 +459,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   maxTimePhases: 10
   budgetPerPhase: 10000
-  canTakeOverLeftBudget: 1
+  canTakeOverLeftBudget: 0
   timePhaseStartYear: 2020
   timePhaseDuration: 10
   techUpgrades: []

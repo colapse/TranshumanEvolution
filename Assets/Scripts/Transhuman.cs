@@ -80,7 +80,7 @@ public class Transhuman : SerializedMonoBehaviour
         {
             for (int i = 0; i < parent.transform.childCount; i++)
             {
-                Destroy(parent.transform.GetChild(i));
+                Destroy(parent.transform.GetChild(i).gameObject);
             }
         }
     }

@@ -23,6 +23,9 @@ public class UIManager : MonoBehaviour
     
     private UITechBranchesTabController branchesTabController;
     private UITechUpgradesTabController upgradesTabController;
+    private UIHelpTabController helpTabController;
+    private UIReportsTabController reportsTabController;
+    private UIPartsTabController partsTabController;
     
     [FoldoutGroup("Top Bar Setup")] public GameObject timePhaseBarPrefab;
     [FoldoutGroup("Top Bar Setup")] public GameObject budgetProgressBarPrefab;
@@ -111,40 +114,74 @@ public class UIManager : MonoBehaviour
             tabGo?.SetActive(false);
             buttonUpgradesTab?.onClick.AddListener(ShowUpgradesTab);
         }
-        
-        // TODO Other
+
+        if (helpTabPrefab != null)
+        {
+            var tabGo = Instantiate(helpTabPrefab,tabsContainer.transform);
+            helpTabController = tabGo?.GetComponent<UIHelpTabController>();
+            tabGo?.SetActive(false);
+            buttonHelpTab?.onClick.AddListener(ShowHelpTab);
+        }
+
+        if (reportTabPrefab != null)
+        {
+            var tabGo = Instantiate(reportTabPrefab,tabsContainer.transform);
+            reportsTabController = tabGo?.GetComponent<UIReportsTabController>();
+            tabGo?.SetActive(false);
+            buttonReportTab?.onClick.AddListener(ShowReportTab);
+        }
+
+        if (partsTabPrefab != null)
+        {
+            var tabGo = Instantiate(partsTabPrefab,tabsContainer.transform);
+            partsTabController = tabGo?.GetComponent<UIPartsTabController>();
+            tabGo?.SetActive(false);
+            buttonPartsTab?.onClick.AddListener(ShowPartsTab);
+        }
         
         ShowHelpTab();
     }
 
     public void ShowBranchesTab()
     {
+        HideAllTabs();
         branchesTabController?.gameObject.SetActive(true);
-        
-        // TODO Hide otherpanels
-        upgradesTabController?.gameObject.SetActive(false);
     }
 
     public void ShowPartsTab()
     {
-        // TODO Hide otherpanels
+        HideAllTabs();
+        partsTabController?.gameObject.SetActive(true);
     }
 
     public void ShowUpgradesTab()
     {
+        HideAllTabs();
         upgradesTabController?.gameObject.SetActive(true);
         
-        // TODO Hide otherpanels
-        branchesTabController?.gameObject.SetActive(false);
     }
 
     public void ShowReportTab()
     {
-        // TODO Hide otherpanels
+        HideAllTabs();
+        reportsTabController?.gameObject.SetActive(true);
     }
 
     public void ShowHelpTab()
     {
-        // TODO Hide otherpanels
+        HideAllTabs();
+        helpTabController?.gameObject.SetActive(true);
+        
+    }
+
+    public void HideAllTabs()
+    {
+        if (tabsContainer != null && tabsContainer.transform.childCount > 0)
+        {
+            for (int i = 0; i < tabsContainer.transform.childCount; i++)
+            {
+                tabsContainer.transform.GetChild(i).gameObject.SetActive(false);
+            }
+        }
     }
 }

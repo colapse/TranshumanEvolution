@@ -25,22 +25,28 @@ public class GameMaster : SerializedMonoBehaviour
     {
         if (sceneView == currentSceneView && !reload || sceneNames == null || !sceneNames.ContainsKey(sceneView))
             return;
-
+        
         var loadSceneOP = SceneManager.LoadSceneAsync(sceneNames[sceneView]);
         loadSceneOP.allowSceneActivation = true;
         loadSceneOP.completed += op =>
         {
-            InitNewGame();
+            if (sceneView == SceneView.GameScene)
+                StartCoroutine(InitNewGame());
             
-            if (sceneNames.ContainsKey(currentSceneView))
+            /*if (sceneNames.ContainsKey(currentSceneView))
             {
-                SceneManager.UnloadSceneAsync(sceneNames[sceneView]);
-            }
+                //Debug.Log(sceneNames[currentSceneView]);
+                //SceneManager.UnloadSceneAsync(sceneNames[currentSceneView]);
+            }*/
+
+            currentSceneView = sceneView;
         };
     }
 
-    private void InitNewGame()
+    private IEnumerator InitNewGame()
     {
+        yield return new WaitForEndOfFrame();
+        
         var worldManager = FindObjectOfType<WorldManager>();
         if (worldManager == null)
         {
@@ -49,5 +55,7 @@ public class GameMaster : SerializedMonoBehaviour
         }
         worldManager.gameSetupData = gameSetupData;
         worldManager.InitWorld();
+
+        yield return 0;
     }
 }

@@ -11,4 +11,10 @@ public class TechBranch : ScriptableObject
     public string branchDescription;
     public Sprite branchIcon;
     public int maxLevels = 5;
+
+    /*
+    public bool CheckUpgradeRequirements(Player player)
+    {
+        return true; // TODO
+    }*/
 }
