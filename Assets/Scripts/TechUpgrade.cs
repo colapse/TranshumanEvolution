@@ -15,10 +15,24 @@ public class TechUpgrade : SerializedScriptableObject
     public List<TechUpgrade> requiredTechUpgrades;
     public Dictionary<TechBranch, int> requiredTechBranchLevels;
 
+    // === Effects
+    //public GameSetupData.WealthLevels minWealthLevel;
+    public UpgradePart upgradePart;
+    public bool obtainUpgradePart = true;
+    
     [Range(0,10)]
-    public int humanityIndex;
-    public GameSetupData.WealthLevels minWealthLevel;
-    public List<UpgradePart> unlockUpgradeParts;
+    public int transhumanIndexChange; // Lower or Raise the humanityIndex of the upgradePart that gets upgraded
+    [Range(0,10)]
+    public int aestheticTranshumanIndexChange; // Lower or Raise the humanityIndex of the upgradePart that gets upgraded
+    /**
+     * Example: If the upgradePart.minWealthLevel is MiddleClass(=1) and this value is set to .3,
+     * the upgradePart will get more expensive and result in the minWealthLevel of the upgradePart to be
+     * UpperClass(=2) [Value will be rounded UP to the next integer].
+     * On the other hand, if this value is set to -1, it will get available for the lower class.
+     */
+    public float minWealthLevelChange;
+
+    public int partTechLevelChange;
 
     [SerializeField]
     public Dictionary<TechUpgradeType, bool> upgradeTypes;

@@ -42,7 +42,7 @@ namespace UI
         }
 
         private void TechBrachPointIncreased(TechBranch obj) => Init();
-        private void TimePeriodChanged(TimePeriod obj) => Init();
+        private void TimePeriodChanged(TimePeriod oldTimePeriod, TimePeriod newTimePeriod) => Init();
         private void NewUpgradeResearched(TechUpgrade obj) => Init();
 
         // Update is called once per frame

@@ -38,7 +38,7 @@ namespace UI
             }
         }
         
-        public void TimePeriodChanged(TimePeriod newTimePeriod)
+        public void TimePeriodChanged(TimePeriod oldTimePeriod, TimePeriod newTimePeriod)
         {
             LoadEntries();
         }

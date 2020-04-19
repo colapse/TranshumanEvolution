@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -8,7 +9,20 @@ using UnityEngine;
 public class GameSetupData : SerializedScriptableObject
 {
     // Order is important {Poorest, ... , Richest}
-    public enum WealthLevels{Poor, Middle, Wealthy, Rich, Superrich}
+    public enum WealthLevels{LowerClass = 0, MiddleClass = 1, UpperClass = 2}
+
+    public static Vector2Int GetWealthLevelsMinMax() // x=min, y=max
+    {
+        var enumMinValue = 0;
+        var enumMaxValue = 0;
+        foreach (int enumVal in Enum.GetValues(typeof(GameSetupData.WealthLevels)))
+        {
+            if (enumVal < enumMinValue) enumMinValue = enumVal;
+            if (enumVal > enumMaxValue) enumMaxValue = enumVal;
+        }
+        
+        return new Vector2Int(enumMinValue, enumMaxValue);
+    }
 
     public string setupName;
     [TextArea]

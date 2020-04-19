@@ -35,7 +35,7 @@ namespace UI
             }
         }
 
-        private void TimePeriodChanged(TimePeriod timePeriod)
+        private void TimePeriodChanged(TimePeriod oldTimePeriod, TimePeriod newTimePeriod)
         {
             CreateTimePeriodBlocks();
         }

@@ -8,18 +8,18 @@ public class Player : MonoBehaviour
 {
     public event Action MoneySpentEvent;
     public event Action<TechBranch> TechBranchPointIncreasedEvent;
-    public event Action<TimePeriod> TimePeriodChangedEvent;
+    public event Action<TimePeriod,TimePeriod> TimePeriodChangedEvent; // OldTimePeriod, NewTimePeriod
     public event Action<TechUpgrade> NewTechUpgradeResearchedEvent;
     
     public GameSetupData gameSetupData;
     
-    public Dictionary<TechBranch, int> techBranchLevels;
-    public List<TechUpgrade> techUpgrades;
-    public List<UpgradePart> upgradeParts;
+    public Dictionary<TechBranch, int> techBranchLevels = new Dictionary<TechBranch, int>();
+    public List<TechUpgrade> techUpgrades = new List<TechUpgrade>();
+    public List<ObtainedUpgradePart> obtainedUpgradeParts = new List<ObtainedUpgradePart>();
 
     public Transhuman transhuman;
     
-    public List<TimePeriod> timePeriodsData;
+    public List<TimePeriod> timePeriodsData = new List<TimePeriod>();
     public TimePeriod currentTimePeriod;
 
     [field: ShowInInspector]
@@ -43,16 +43,22 @@ public class Player : MonoBehaviour
 
         AvailableBudget = gameSetupData.budgetPerPhase + (gameSetupData.canTakeOverLeftBudget ? AvailableBudget : 0);
         newTimePeriod.totalStartBudget = AvailableBudget;
-        
+
+        if (currentTimePeriod != null)
+        {
+            currentTimePeriod?.GenerateReport(this);
+            timePeriodsData.Add(currentTimePeriod);
+        }
+
+        var oldTimePeriod = currentTimePeriod;
         currentTimePeriod = newTimePeriod;
-        TimePeriodChangedEvent?.Invoke(currentTimePeriod);
+        TimePeriodChangedEvent?.Invoke(oldTimePeriod,currentTimePeriod);
     }
 
     public void InitData()
     {
         transhuman = FindObjectOfType<Transhuman>();
         UpdateTranshumanParts();
-        
     }
 
     public bool BuyTechBranchPoint(TechBranch techBranch)
@@ -92,11 +98,23 @@ public class Player : MonoBehaviour
         if (SpendMoney(cost))
         {
             techUpgrades.Add(techUpgrade);
+
+            if (techUpgrade.obtainUpgradePart && !HasObtainedUpgradePart(techUpgrade.upgradePart))
+            {
+                var newObtainedUpgradePart = new ObtainedUpgradePart(techUpgrade.upgradePart);
+                obtainedUpgradeParts.Add(newObtainedUpgradePart);
+            }
+
             NewTechUpgradeResearchedEvent?.Invoke(techUpgrade);
             return true;
         }
         
         return false;
+    }
+
+    public bool HasObtainedUpgradePart(UpgradePart upgradePart)
+    {
+        return upgradePart != null && obtainedUpgradeParts.Count(oup => oup?.originalUpgradePart == upgradePart) > 0;
     }
 
     public bool SpendMoney(int amount)
@@ -121,12 +139,12 @@ public class Player : MonoBehaviour
     [Button]
     public void UpdateTranshumanParts()
     {
-        if (transhuman != null && upgradeParts != null)
+        if (transhuman != null && obtainedUpgradeParts != null)
         {
-            foreach (var upgradePart in upgradeParts)
+            foreach (var obtainedUpgradePart in obtainedUpgradeParts)
             {
                 // TODO What if there are two upgradeParts of the same category? How can I determine which is the latest?
-                transhuman.SwapActiveUpgradePart(upgradePart);
+                transhuman.SwapActiveUpgradePart(obtainedUpgradePart.originalUpgradePart);
             }
         }
         //transhuman?.UpdateActiveUpgradeParts();

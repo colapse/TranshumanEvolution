@@ -105,20 +105,27 @@ namespace UI
                 }
 
                 // Load acquired parts of current upgradecategory
-                foreach (var part in _player.upgradeParts)
+                if (_player.obtainedUpgradeParts != null)
                 {
-                    if(part.upgradeCategory != techUpgradeCategory) continue;
+                    foreach (var obtainedPart in _player.obtainedUpgradeParts)
+                    {
+                        if(obtainedPart.originalUpgradePart.upgradeCategory != techUpgradeCategory) continue;
                     
-                    var go = Instantiate(partButtonPrefab, categoryPartsButtonContainer.transform);
-                    var btn = go.GetComponent<Button>();
-                    upgradePartButtons.Add(part, btn);
-                    var img = go.GetComponentInChildren<Image>();
-                    var txt = go.GetComponentInChildren<Text>();
+                        var go = Instantiate(partButtonPrefab, categoryPartsButtonContainer.transform);
+                        var btn = go.GetComponent<Button>();
+                        upgradePartButtons.Add(obtainedPart.originalUpgradePart, btn);
+                        var img = go.GetComponentInChildren<Image>();
+                        var txt = go.GetComponentInChildren<Text>();
 
-                    if (txt != null) txt.text = part.upgradePartName;
-                    if (img != null && part.upgradePartIcon) img.sprite = part.upgradePartIcon;
-                    if(btn != null) btn.onClick.AddListener(()=>{LoadPartDetails(part);UpdatePartButtonsColor(part);});
+                        if (txt != null) txt.text = obtainedPart.originalUpgradePart.upgradePartName;
+                        if (img != null && obtainedPart.originalUpgradePart.upgradePartIcon) img.sprite = obtainedPart.originalUpgradePart.upgradePartIcon;
+                        if(btn != null) btn.onClick.AddListener(()=>{
+                            LoadPartDetails(obtainedPart.originalUpgradePart);
+                            UpdatePartButtonsColor(obtainedPart.originalUpgradePart);
+                            _player.transhuman.SwapActiveUpgradePart(obtainedPart.originalUpgradePart);});
+                    }
                 }
+                
             
             }
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UI;
@@ -53,8 +54,20 @@ public class UIManager : MonoBehaviour
     public void InitUI()
     {
         _player = FindObjectOfType<Player>();
+        _player.TimePeriodChangedEvent += TimePeriodChanged;
+        
         InitTopBarContainer();
         InitTabs();
+    }
+
+    private void OnDestroy()
+    {
+        _player.TimePeriodChangedEvent -= TimePeriodChanged;
+    }
+
+    private void TimePeriodChanged(TimePeriod arg1, TimePeriod arg2)
+    {
+        ShowReportTab();
     }
 
     private void InitTopBarContainer()
