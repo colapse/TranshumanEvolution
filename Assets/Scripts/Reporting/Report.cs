@@ -12,12 +12,14 @@ namespace Reporting
             AvailablePartsTechLevelByWL,
             TranshumanIndexOfPopulation,
             TranshumanIndexPerWL,
-            TranshumanIndexAestheticPerWL
+            TranshumanIndexAestheticPerWL,
+            TechBranchResearch
         }
 
         private Dictionary<ReportType,ReportText> _reportTexts = new Dictionary<ReportType,ReportText>();
         
-        private Player _player;
+        public Player _player;
+        public TimePeriod _timePeriod;
         
         // Data (WL = Wealth Level, TH = TransHuman)
         public List<ObtainedUpgradePart> availableParts;
@@ -27,14 +29,17 @@ namespace Reporting
         public int thIndexTotalPopulation;
         public Dictionary<GameSetupData.WealthLevels, int> partsAccessibilityPerWL; // # parts available per WL
         public Dictionary<GameSetupData.WealthLevels, int> partsTechLevelSumPerWL; // Highest TechLevel of available parts per WL
+        
 
-        public Report(Player player)
+        public Report(Player player, TimePeriod timePeriod)
         {
             _player = player;
+            _timePeriod = timePeriod;
             
             InitReportData();
             
             _reportTexts.Add(ReportType.AccessiblityPerWL, new ReportTextAccessibilityPerWL());
+            _reportTexts.Add(ReportType.TechBranchResearch, new ReportTextTechBranchResearch());
         }
 
         public ReportText GetReportText(ReportType reportType)
@@ -85,8 +90,8 @@ namespace Reporting
 
                 for (int i = 0; i < wealthLevelsMinMax.y; i++)
                 {
-                    thIndexPerWL[(GameSetupData.WealthLevels) i] = tmpThIndex[i] / countThIndexes[i];
-                    aestheticThIndexPerWL[(GameSetupData.WealthLevels) i] = tmpAestheticThIndex[i] / countAestheticThIndexes[i];
+                    thIndexPerWL[(GameSetupData.WealthLevels) i] = tmpThIndex[i] / (countThIndexes[i] == 0?1:countThIndexes[i]);
+                    aestheticThIndexPerWL[(GameSetupData.WealthLevels) i] = tmpAestheticThIndex[i] / (countAestheticThIndexes[i]==0?1:countAestheticThIndexes[i]);
                 }
             }
         }

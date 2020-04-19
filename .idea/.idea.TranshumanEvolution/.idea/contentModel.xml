@@ -39,6 +39,7 @@
             <e p="Report.cs" t="Include" />
             <e p="ReportText.cs" t="Include" />
             <e p="ReportTextAccessibilityPerWL.cs" t="Include" />
+            <e p="ReportTextTechBranchResearch.cs" t="Include" />
           </e>
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="TechBranch.cs" t="Include" />

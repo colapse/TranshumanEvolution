@@ -59,6 +59,7 @@ public class UITechUpgradesTabController : MonoBehaviour
 
                 var go = Instantiate(upgCategory.techUpgradeSkillTreePrefab,
                     upgradeCategorySkillTreeContainer.transform);
+                go.SetActive(false);
                 categorySubTabs.Add(upgCategory, go);
             }
         }

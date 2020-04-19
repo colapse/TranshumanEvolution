@@ -131,7 +131,13 @@ public class UIReportsTabController : MonoBehaviour
         Debug.Log("Load Report "+timePeriod.GetYear(_player.gameSetupData));
 
         if (reportTitle != null) reportTitle.text = "Report of " +timePeriod.GetYear(_player.gameSetupData);
-        if (reportText != null) reportText.text = timePeriod.report?.GetReportText(Report.ReportType.AccessiblityPerWL).GetReportText(timePeriod.report)??"";
+        if (reportText != null)
+        {
+            reportText.text = "\n\nAccessibility Review\n=====================\n";
+            reportText.text += timePeriod.report?.GetReportText(Report.ReportType.AccessiblityPerWL).GetReportText(timePeriod.report)??"";
+            reportText.text += "\n\nTechnology Review\n=====================\n";
+            reportText.text += timePeriod.report?.GetReportText(Report.ReportType.TechBranchResearch).GetReportText(timePeriod.report)??"";
+        }
     }
 
     private void TimePeriodChanged(TimePeriod oldTimePeriod, TimePeriod newTimePeriod)

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f3f4f28f7f17f149b793a424d6b1148, type: 3}
-  m_Name: upgMechEye
+  m_Name: upgBionicEyeVisualCoating
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: b6f41aaf48a390a4888f85ead9310253, type: 2}
-    - {fileID: 11400000, guid: df999851d9d36e34aa036876f93cc405, type: 2}
+    - {fileID: 11400000, guid: 5b473a8bca8c2c04a8214dcea9f20ba3, type: 2}
+    - {fileID: 11400000, guid: 0312f28ea913ad440ae55027685ef5fc, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -45,7 +46,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -68,13 +69,25 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 10
       Data: 1
+    - Name: $v
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
+      Data: 2
     - Name: $v
       Entry: 5
       Data: true
@@ -87,11 +100,15 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  upgradeName: Mechanical Eye
-  upgradeDescription: 
+  upgradeName: Visual Coating
+  upgradeDescription: A visual coating for the eye making it visually look a bit
+    more human like.
   upgradeIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  requiredTechUpgrades: []
-  humanityIndex: 0
-  minWealthLevel: 0
-  unlockUpgradeParts:
-  - {fileID: 11400000, guid: 4a5064a544ad13a4f82a147f25be6dad, type: 2}
+  requiredTechUpgrades:
+  - {fileID: 11400000, guid: 61a1d5c0510d656498e75237990d3409, type: 2}
+  upgradePart: {fileID: 11400000, guid: 4a5064a544ad13a4f82a147f25be6dad, type: 2}
+  obtainUpgradePart: 0
+  transhumanIndexChange: 0
+  aestheticTranshumanIndexChange: -2
+  minWealthLevelChange: 0.5
+  partTechLevelChange: 0

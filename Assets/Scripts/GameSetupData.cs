@@ -54,10 +54,25 @@ public class GameSetupData : SerializedScriptableObject
     public int timePhaseStartYear = 2020;
     [FoldoutGroup("Time Phase Settings"), Tooltip("Amount of years each time phase consists of.")]
     public int timePhaseDuration = 10;
+    [FoldoutGroup("Time Phase Settings"), Tooltip("decade, century, ...")]
+    public string timePhaseDurationName = "decade";
 
 
     [FoldoutGroup("Cost Settings")] public Dictionary<TechBranch, AnimationCurve> techBranchCost;
     [FoldoutGroup("Cost Settings")] public Dictionary<TechUpgrade, int> techUpgradesCost;
+
+    [Button, PropertyOrder(2), FoldoutGroup("Cost Settings")]
+    public void LoadAllTechUpgradesCost(bool keepExistingSettings = true)
+    {
+        if(!keepExistingSettings)
+            techUpgradesCost.Clear();
+        techUpgrades.ForEach(upg =>
+        {
+            if(!keepExistingSettings || !techUpgradesCost.ContainsKey(upg))
+                techUpgradesCost.Add(upg,0);
+        });
+    }
+    
     
     [Button, PropertyOrder(0),FoldoutGroup("Technology Settings")]
     public void LoadAllTechUpgrades() => techUpgrades = Resources.LoadAll<TechUpgrade>(resTechUpgradesPath).ToList();

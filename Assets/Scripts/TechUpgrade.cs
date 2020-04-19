@@ -20,9 +20,9 @@ public class TechUpgrade : SerializedScriptableObject
     public UpgradePart upgradePart;
     public bool obtainUpgradePart = true;
     
-    [Range(0,10)]
+    [Range(-10,10)]
     public int transhumanIndexChange; // Lower or Raise the humanityIndex of the upgradePart that gets upgraded
-    [Range(0,10)]
+    [Range(-10,10)]
     public int aestheticTranshumanIndexChange; // Lower or Raise the humanityIndex of the upgradePart that gets upgraded
     /**
      * Example: If the upgradePart.minWealthLevel is MiddleClass(=1) and this value is set to .3,

@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 052549d65551cc74f8db9ccd9c7af143, type: 3}
-  m_Name: UpgPartSyntheticalBioEye
+  m_Name: UpgPartHumanEye
   m_EditorClassIdentifier: 
-  upgradePartName: Synthetic Biological Eye
-  upgradePartDescription: 
+  upgradePartName: Human Eye
+  upgradePartDescription: A natural human eye.
   upgradePartIcon: {fileID: 0}
   upgradeCategory: {fileID: 11400000, guid: 06529e576c0c7df48ab0c795f3f46996, type: 2}
-  prefab: {fileID: 8240705359189990624, guid: defa3d79e48170847af433db05e77362, type: 3}
+  prefab: {fileID: 235451718467187936, guid: 785ffaa2ac207fa46bb0af8afb5ea397, type: 3}
+  techLevel: 0
+  minWealthLevel: 0
+  transhumanIndex: 0
+  aestheticTranshumanIndex: 0

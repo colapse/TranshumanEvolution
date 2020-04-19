@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 052549d65551cc74f8db9ccd9c7af143, type: 3}
-  m_Name: UpgPartMechanicalEye
+  m_Name: UpgPartEnhancedBionicEye
   m_EditorClassIdentifier: 
-  upgradePartName: Mechanical Eye
-  upgradePartDescription: 
+  upgradePartName: Enhanced Bionic Eye
+  upgradePartDescription: This enhanced version of the bionic eye sharpens the vision
+    compared to a standard eye and tops early versions of bionic eyes in many ways.
   upgradePartIcon: {fileID: 0}
   upgradeCategory: {fileID: 11400000, guid: 06529e576c0c7df48ab0c795f3f46996, type: 2}
-  prefab: {fileID: 6909242724891627848, guid: 43385e92e7800664cb2102fa8d1e1776, type: 3}
+  prefab: {fileID: 8240705359189990624, guid: defa3d79e48170847af433db05e77362, type: 3}
+  techLevel: 4
+  minWealthLevel: 1
+  transhumanIndex: 3
+  aestheticTranshumanIndex: 5

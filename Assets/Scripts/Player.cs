@@ -73,6 +73,15 @@ public class Player : MonoBehaviour
                 techBranchLevels[techBranch] = nextTechBranchLevel;
             else
                 techBranchLevels.Add(techBranch,nextTechBranchLevel);
+
+            if (currentTimePeriod != null)
+            {
+                if (currentTimePeriod.obtainedTechBranchLevels.ContainsKey(techBranch))
+                    currentTimePeriod.obtainedTechBranchLevels[techBranch]++;
+                else
+                    currentTimePeriod.obtainedTechBranchLevels.Add(techBranch,1);
+            }
+            
             TechBranchPointIncreasedEvent?.Invoke(techBranch);
             return true;
         }
@@ -103,6 +112,12 @@ public class Player : MonoBehaviour
             {
                 var newObtainedUpgradePart = new ObtainedUpgradePart(techUpgrade.upgradePart);
                 obtainedUpgradeParts.Add(newObtainedUpgradePart);
+            }
+
+            if (currentTimePeriod != null)
+            {
+                if(!currentTimePeriod.obtainedTechUpgrades.Contains(techUpgrade))
+                    currentTimePeriod.obtainedTechUpgrades.Add(techUpgrade);
             }
 
             NewTechUpgradeResearchedEvent?.Invoke(techUpgrade);

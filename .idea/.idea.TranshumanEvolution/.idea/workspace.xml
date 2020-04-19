@@ -27,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Reporting/ReportText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranchResearch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,15 +51,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIUpgradeTypeController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeCategory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIHelpTabController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Report/ReportTextAccessibilityPerWL.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Report/ReportText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObtainedUpgradePart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Report/Report.cs" />
@@ -66,11 +64,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechBranchesTabController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradeController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITimePhaseBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPartsTabController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIReportsTabController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranchResearch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/Report.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" />
       </list>
     </option>
   </component>
@@ -126,7 +130,7 @@
       <workItem from="1586941270957" duration="19851000" />
       <workItem from="1587066816494" duration="5382000" />
       <workItem from="1587114746199" duration="10106000" />
-      <workItem from="1587233552421" duration="22131000" />
+      <workItem from="1587233552421" duration="30683000" />
     </task>
     <servers />
   </component>
@@ -147,5 +151,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="601" y="129" key="RiderGenerateDialog" timestamp="1587317208027">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="601" y="129" key="RiderGenerateDialog/0.0.1536.824@0.0.1536.824" timestamp="1587317208027" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587319144054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587319144054" />
   </component>
 </project>

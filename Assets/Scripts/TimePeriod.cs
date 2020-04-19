@@ -8,13 +8,13 @@ public class TimePeriod
     public int newAddedBudget;
     public int totalStartBudget;
     public int spentMoney;
-    public List<TechUpgrade> obtainedTechUpgrades;
-    public Dictionary<TechBranch, int> obtainedTechBranchLevels;
+    public List<TechUpgrade> obtainedTechUpgrades = new List<TechUpgrade>();
+    public Dictionary<TechBranch, int> obtainedTechBranchLevels = new Dictionary<TechBranch, int>();
     public Report report;
 
     public Report GenerateReport(Player player)
     {
-        report = new Report(player);
+        report = new Report(player, this);
         
         return report;
     }
