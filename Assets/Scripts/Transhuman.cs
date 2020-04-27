@@ -46,6 +46,9 @@ public class Transhuman : SerializedMonoBehaviour
                         
                         GameObject upgradePartGO = Instantiate(upgradePart.prefab, attachPoint.transform);
                         Transform upgradePartParentAttachPoint = upgradePartGO.transform.Find("parentAttachPoint"); // TODO HACKY
+                        if(attachPoint.name.Contains("Left"))
+                            upgradePartGO.transform.rotation = Quaternion.Inverse(upgradePartGO.transform.rotation);
+                        //float multiplier = attachPoint.name.Contains("Left") ? 1 : -1;
                         upgradePartGO.transform.localPosition = upgradePartParentAttachPoint == null ? Vector3.zero : upgradePartParentAttachPoint.localPosition*-1;
                     }
                 }

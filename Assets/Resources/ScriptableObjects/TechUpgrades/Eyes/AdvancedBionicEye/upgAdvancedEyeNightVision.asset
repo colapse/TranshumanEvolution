@@ -106,7 +106,10 @@ MonoBehaviour:
   requiredTechUpgrades: []
   upgradePart: {fileID: 11400000, guid: fe66aebf37ba65b47b8eee9b5ec80dc8, type: 2}
   obtainUpgradePart: 0
-  transhumanIndexChange: 1
+  transhumanIndexChange: 2
   aestheticTranshumanIndexChange: 0
+  securityChange: 0
+  connectivenessChange: 0
+  physicalAggressionThreatChange: 0
   minWealthLevelChange: 0.25
   partTechLevelChange: 1

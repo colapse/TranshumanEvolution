@@ -31,6 +31,11 @@ public class TimePeriod
 
     public int GetYear(GameSetupData gameSetupData)
     {
-        return gameSetupData.timePhaseStartYear + (GetCurrentTimePeriodLevel()-1) * gameSetupData.timePhaseDuration;
+        return gameSetupData.timePhaseStartYear + GetYearsSinceStart(gameSetupData);
+    }
+
+    public int GetYearsSinceStart(GameSetupData gameSetupData)
+    {
+        return (GetCurrentTimePeriodLevel() - 1) * gameSetupData.timePhaseDuration;
     }
 }

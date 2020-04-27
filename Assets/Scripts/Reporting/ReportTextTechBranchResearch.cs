@@ -9,7 +9,6 @@ namespace Reporting
         public override string GetReportText(Report report)
         {
             string text = "";
-            Debug.Log("Wushhh");
             var totalNewResearchPoints = report?._timePeriod?.obtainedTechBranchLevels?.Values.Sum();
             var totalResearchedBranches =
                 report?._timePeriod?.obtainedTechBranchLevels?.Count(entry => entry.Value > 0);

@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 5789630469391330618}
   - component: {fileID: 4782945883563472300}
   - component: {fileID: 4308634313424162796}
+  - component: {fileID: 7794420775137934412}
   m_Layer: 5
   m_Name: TechTreeUpgrade
   m_TagString: Untagged
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb0c7045f04aa44e82be1d1c5ba76c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toolTipPrefab: {fileID: 848880155627077942, guid: 9094984516cfcd5479fff9ded2602fec, type: 3}
   upgradeTypePrefab: {fileID: 5716485997184623696, guid: fd6c0e0a33757f147ada30e53be65f25, type: 3}
   upgradeTypeBar: {fileID: 8597766892024096565}
   upgradeCostText: {fileID: 1026643084171527956}
@@ -284,6 +286,51 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4279959742
   techUpgrade: {fileID: 0}
+--- !u!114 &7794420775137934412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4433222644910577060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4308634313424162796}
+          m_TargetAssemblyTypeName: UI.UITechUpgradeController, Assembly-CSharp
+          m_MethodName: OnMouseEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4308634313424162796}
+          m_TargetAssemblyTypeName: UI.UITechUpgradeController, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8597766892024096565
 GameObject:
   m_ObjectHideFlags: 0

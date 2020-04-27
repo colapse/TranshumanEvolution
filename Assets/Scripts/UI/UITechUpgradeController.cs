@@ -6,6 +6,9 @@ namespace UI
 {
     public class UITechUpgradeController : MonoBehaviour
     {
+        private Canvas canvas;
+        public GameObject toolTipPrefab;
+        
         public GameObject upgradeTypePrefab;
 
         public GameObject upgradeTypeBar;
@@ -22,10 +25,15 @@ namespace UI
         private bool eventRegistered = false;
 
         private Player _player;
+
+        private ToolTip toolTip;
+        private RectTransform rectTransform;
+        
         // Start is called before the first frame update
         void Start()
         {
-            
+            canvas = FindObjectOfType<Canvas>();
+            rectTransform = GetComponent<RectTransform>();
             Init();
         }
 
@@ -115,6 +123,23 @@ namespace UI
                     borderImage.color = upgradeAvailable ? upgradeAvailableColor : upgradeNotAvailableColor;
                 }
             }
+            
+            // ToolTip
+            if (toolTipPrefab != null && toolTip == null)
+            {
+                var go = Instantiate(toolTipPrefab, canvas.transform);
+                toolTip = go.GetComponent<ToolTip>();
+                if (toolTip != null)
+                {
+                    toolTip.SetTitle(techUpgrade.upgradeName);
+                    toolTip.SetDescription(techUpgrade.upgradeDescription);
+                    var toolTipPos = rectTransform.position;
+                    toolTipPos.x += rectTransform.rect.width/2 + 1;
+                    toolTipPos.y += rectTransform.rect.height/2 + 1;
+                    toolTip.rectTransform.position = toolTipPos;
+                    toolTip.HideToolTip();
+                }
+            }
         }
 
         private void BuyTechUpgradeClicked()
@@ -123,6 +148,16 @@ namespace UI
             {
                 _player.BuyTechUpgrade(techUpgrade);
             }
+        }
+
+        public void OnMouseEnter()
+        {
+            toolTip?.ShowToolTip();
+        }
+
+        public void OnMouseExit()
+        {
+            toolTip?.HideToolTip();
         }
     }
 }

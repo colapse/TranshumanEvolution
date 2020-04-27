@@ -21,5 +21,8 @@ MonoBehaviour:
   prefab: {fileID: 6909242724891627848, guid: 43385e92e7800664cb2102fa8d1e1776, type: 3}
   techLevel: 2
   minWealthLevel: 2
-  transhumanIndex: 2
+  transhumanIndex: 3
   aestheticTranshumanIndex: 7
+  security: 0
+  connectiveness: 0
+  physicalAggressionThreat: 0

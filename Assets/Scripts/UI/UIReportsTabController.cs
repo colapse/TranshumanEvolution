@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Reporting;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,15 @@ public class UIReportsTabController : MonoBehaviour
     public GameObject timePeriodButtonsContainer;
     public GameObject reportContentContainer;
 
+    public GameObject overAllThIndexContainer;
+    public UIIndexBar overAllTHIndexBar;
+    public GameObject lowerClassThIndexContainer;
+    public UIIndexBar lowerClassTHIndexBar;
+    public GameObject middleClassThIndexContainer;
+    public UIIndexBar middleClassTHIndexBar;
+    public GameObject upperClassThIndexContainer;
+    public UIIndexBar upperClassTHIndexBar;
+    
     public Text reportTitle;
     public Text reportText;
 
@@ -127,8 +137,6 @@ public class UIReportsTabController : MonoBehaviour
     private void LoadReport(TimePeriod timePeriod)
     {
         if (timePeriod == null || reportContentContainer == null) return;
-        // TODO
-        Debug.Log("Load Report "+timePeriod.GetYear(_player.gameSetupData));
 
         if (reportTitle != null) reportTitle.text = "Report of " +timePeriod.GetYear(_player.gameSetupData);
         if (reportText != null)
@@ -137,6 +145,33 @@ public class UIReportsTabController : MonoBehaviour
             reportText.text += timePeriod.report?.GetReportText(Report.ReportType.AccessiblityPerWL).GetReportText(timePeriod.report)??"";
             reportText.text += "\n\nTechnology Review\n=====================\n";
             reportText.text += timePeriod.report?.GetReportText(Report.ReportType.TechBranchResearch).GetReportText(timePeriod.report)??"";
+        }
+
+        if (overAllTHIndexBar != null)
+        {
+            overAllTHIndexBar.CurrentIndexPos = timePeriod.report?.thIndexTotalPopulation ?? 5;
+            overAllThIndexContainer?.SetActive(true);
+        }
+        if (lowerClassTHIndexBar != null && timePeriod.report != null)
+        {
+            timePeriod.report.thIndexPerWL.TryGetValue(GameSetupData.WealthLevels.LowerClass,
+                out var thIndexLowerClass);
+            lowerClassTHIndexBar.CurrentIndexPos = thIndexLowerClass;
+            lowerClassThIndexContainer?.SetActive(true);
+        }
+        if (middleClassTHIndexBar != null && timePeriod.report != null)
+        {
+            timePeriod.report.thIndexPerWL.TryGetValue(GameSetupData.WealthLevels.MiddleClass,
+                out var thIndexMiddleClass);
+            middleClassTHIndexBar.CurrentIndexPos = thIndexMiddleClass;
+            middleClassThIndexContainer?.SetActive(true);
+        }
+        if (upperClassTHIndexBar != null && timePeriod.report != null)
+        {
+            timePeriod.report.thIndexPerWL.TryGetValue(GameSetupData.WealthLevels.UpperClass,
+                out var thIndexUpperClass);
+            upperClassTHIndexBar.CurrentIndexPos = thIndexUpperClass;
+            upperClassThIndexContainer?.SetActive(true);
         }
     }
 

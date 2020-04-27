@@ -62,7 +62,8 @@ public class UIManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        _player.TimePeriodChangedEvent -= TimePeriodChanged;
+        if(_player != null)
+            _player.TimePeriodChangedEvent -= TimePeriodChanged;
     }
 
     private void TimePeriodChanged(TimePeriod arg1, TimePeriod arg2)

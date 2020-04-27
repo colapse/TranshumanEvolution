@@ -3,7 +3,15 @@ guid: dfb0c7045f04aa44e82be1d1c5ba76c2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - toolTipPrefab: {fileID: 848880155627077942, guid: 9094984516cfcd5479fff9ded2602fec, type: 3}
+  - upgradeTypePrefab: {instanceID: 0}
+  - upgradeTypeBar: {instanceID: 0}
+  - upgradeCostText: {instanceID: 0}
+  - upgradeIconImage: {instanceID: 0}
+  - borderImage: {instanceID: 0}
+  - buyButton: {instanceID: 0}
+  - techUpgrade: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

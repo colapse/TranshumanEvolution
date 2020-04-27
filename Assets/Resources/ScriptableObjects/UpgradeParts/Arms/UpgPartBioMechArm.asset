@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052549d65551cc74f8db9ccd9c7af143, type: 3}
+  m_Name: UpgPartBioMechArm
+  m_EditorClassIdentifier: 
+  upgradePartName: Bio-Mechanical Arm
+  upgradePartDescription: A bio mechanical prosthetic arm that has a very tight resemblence
+    to a human arm. It's highly advanced sensory input from detected brain signals
+    together with it's fine motorics allows a very natural movement.
+  upgradePartIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  upgradeCategory: {fileID: 11400000, guid: 6a84d799fc9c7594c90a8d08d6a649fd, type: 2}
+  prefab: {fileID: 1298083858216553476, guid: 11588d31b2e1b3d478972565c3810278, type: 3}
+  techLevel: 6
+  minWealthLevel: 2
+  transhumanIndex: 10
+  aestheticTranshumanIndex: 1
+  security: 0
+  connectiveness: 0
+  physicalAggressionThreat: 1

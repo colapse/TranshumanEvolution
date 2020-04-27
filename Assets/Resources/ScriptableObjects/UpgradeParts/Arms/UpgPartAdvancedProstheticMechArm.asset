@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052549d65551cc74f8db9ccd9c7af143, type: 3}
+  m_Name: UpgPartAdvancedProstheticMechArm
+  m_EditorClassIdentifier: 
+  upgradePartName: Skinned Prosethetic Arm
+  upgradePartDescription: A prosthetic arm looking with a skin-like mantle around
+    it. It has improved motorics compared to it's predecessor and has increased strength.
+  upgradePartIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  upgradeCategory: {fileID: 11400000, guid: 6a84d799fc9c7594c90a8d08d6a649fd, type: 2}
+  prefab: {fileID: 54949863518289676, guid: 24f26c38a93e6a945bd26e37f0cf0769, type: 3}
+  techLevel: 4
+  minWealthLevel: 2
+  transhumanIndex: 6
+  aestheticTranshumanIndex: 4
+  security: 0
+  connectiveness: 0
+  physicalAggressionThreat: 2

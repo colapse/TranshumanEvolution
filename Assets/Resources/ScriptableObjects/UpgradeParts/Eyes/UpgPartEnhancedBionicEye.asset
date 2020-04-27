@@ -17,8 +17,11 @@ MonoBehaviour:
     compared to a standard eye and tops early versions of bionic eyes in many ways.
   upgradePartIcon: {fileID: 0}
   upgradeCategory: {fileID: 11400000, guid: 06529e576c0c7df48ab0c795f3f46996, type: 2}
-  prefab: {fileID: 8240705359189990624, guid: defa3d79e48170847af433db05e77362, type: 3}
+  prefab: {fileID: 6909242724891627848, guid: 43385e92e7800664cb2102fa8d1e1776, type: 3}
   techLevel: 4
   minWealthLevel: 1
-  transhumanIndex: 3
+  transhumanIndex: 5
   aestheticTranshumanIndex: 5
+  security: 0
+  connectiveness: 0
+  physicalAggressionThreat: 0

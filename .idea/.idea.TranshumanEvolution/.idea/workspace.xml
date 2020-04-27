@@ -11,35 +11,36 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIUpgradeTypeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIIndexBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObtainedUpgradePart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechBranch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranchResearch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Reporting/Report.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextAccessibilityPerWL.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgradeCategory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIBudgetBarController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.1.0a23/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIReportsTabController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITimePhaseBar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Reporting/ReportText.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranchResearch.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechBranch.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIReportsTabController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObtainedUpgradePart.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITechBranchesTabController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIHelpTabController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIBudgetBarController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIPartsTabController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIUpgradeTypeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITimePhaseBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITechBranchesTabController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TechUpgradeCategory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ToolTip.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -52,29 +53,32 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeCategory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIHelpTabController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Report/ReportTextAccessibilityPerWL.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Report/ReportText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObtainedUpgradePart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Report/Report.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIBudgetBarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechBranchesTabController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradeController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITimePhaseBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIPartsTabController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranch.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIReportsTabController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ToolTip.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradeController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextAccessibilityPerWL.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranchResearch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIReportsTabController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIIndexBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObtainedUpgradePart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/Report.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" />
       </list>
     </option>
   </component>
@@ -131,6 +135,7 @@
       <workItem from="1587066816494" duration="5382000" />
       <workItem from="1587114746199" duration="10106000" />
       <workItem from="1587233552421" duration="30683000" />
+      <workItem from="1587833158251" duration="20807000" />
     </task>
     <servers />
   </component>

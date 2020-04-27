@@ -24,6 +24,11 @@ public class TechUpgrade : SerializedScriptableObject
     public int transhumanIndexChange; // Lower or Raise the humanityIndex of the upgradePart that gets upgraded
     [Range(-10,10)]
     public int aestheticTranshumanIndexChange; // Lower or Raise the humanityIndex of the upgradePart that gets upgraded
+    
+    [Range(0, 3)] public int securityChange; // 0 = No security, 1 = somewhat secure, 2 = secure, 3 = Unhackable
+    [Range(0, 3)] public int connectivenessChange; // 0 = No connection, 1 = near connection (Phone, BT..), 2 = +Mobile Network, 3 = +Satelite
+    [Range(0, 3)] public int physicalAggressionThreatChange; // 0 = No threat, 1 = Low Risk, 2 = Can cause medium damage, 3 = Big threat (riots, robbery, attacks)
+    
     /**
      * Example: If the upgradePart.minWealthLevel is MiddleClass(=1) and this value is set to .3,
      * the upgradePart will get more expensive and result in the minWealthLevel of the upgradePart to be

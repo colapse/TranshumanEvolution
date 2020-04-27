@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052549d65551cc74f8db9ccd9c7af143, type: 3}
+  m_Name: UpgPartProstheticMechArm
+  m_EditorClassIdentifier: 
+  upgradePartName: Prosethetic Arm
+  upgradePartDescription: A prosthetic arm looking very mechanical. It receives instructions
+    for its movement through impulses of attached muscle tissue.
+  upgradePartIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  upgradeCategory: {fileID: 11400000, guid: 6a84d799fc9c7594c90a8d08d6a649fd, type: 2}
+  prefab: {fileID: 3381935744261663954, guid: 3d8a8492d00ff5d418aa1ffaa463c1ee, type: 3}
+  techLevel: 1
+  minWealthLevel: 1
+  transhumanIndex: 3
+  aestheticTranshumanIndex: 10
+  security: 0
+  connectiveness: 0
+  physicalAggressionThreat: 1

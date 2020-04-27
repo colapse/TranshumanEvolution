@@ -104,10 +104,15 @@ MonoBehaviour:
   upgradeDescription: Add a wifi module to the eye enabling you to record images
     and video and transfer them to you mobile phone.
   upgradeIcon: {fileID: 0}
-  requiredTechUpgrades: []
+  requiredTechUpgrades:
+  - {fileID: 11400000, guid: b463755875158c3489fe2e20a83cf804, type: 2}
+  - {fileID: 11400000, guid: 16de53c824be85348999318b2ec1abf7, type: 2}
   upgradePart: {fileID: 11400000, guid: fe66aebf37ba65b47b8eee9b5ec80dc8, type: 2}
   obtainUpgradePart: 0
-  transhumanIndexChange: 1
+  transhumanIndexChange: 2
   aestheticTranshumanIndexChange: 0
+  securityChange: 0
+  connectivenessChange: 1
+  physicalAggressionThreatChange: 0
   minWealthLevelChange: 0.5
   partTechLevelChange: 1

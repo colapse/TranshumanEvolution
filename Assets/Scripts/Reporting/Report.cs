@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Reporting
@@ -57,6 +58,7 @@ namespace Reporting
             partsTechLevelSumPerWL = new Dictionary<GameSetupData.WealthLevels, int>();
             
             var wealthLevelsMinMax = GameSetupData.GetWealthLevelsMinMax();
+            var wealthLevelsCount = GameSetupData.GetWealthLevelsCount();
             foreach (var enumEntry in Enum.GetValues(typeof(GameSetupData.WealthLevels)))
             {
                 thIndexPerWL.Add((GameSetupData.WealthLevels)enumEntry,0);
@@ -66,18 +68,18 @@ namespace Reporting
             }
             
             
-            availableParts = _player.obtainedUpgradeParts;
-
+            availableParts = _player.obtainedUpgradeParts.Where(oup => oup.originalUpgradePart.transhumanIndex > 0).ToList();
+            
             if (availableParts != null && availableParts.Count > 0)
             {
-                int[] tmpThIndex = new int[wealthLevelsMinMax.y];
-                int[] countThIndexes = new int[wealthLevelsMinMax.y];
-                int[] tmpAestheticThIndex = new int[wealthLevelsMinMax.y];
-                int[] countAestheticThIndexes = new int[wealthLevelsMinMax.y];
+                int[] tmpThIndex = new int[wealthLevelsCount];
+                int[] countThIndexes = new int[wealthLevelsCount];
+                int[] tmpAestheticThIndex = new int[wealthLevelsCount];
+                int[] countAestheticThIndexes = new int[wealthLevelsCount];
                 foreach (var upgradePart in availableParts)
                 {
                     var minWealthLevel = upgradePart.GetMinWealthLevelAccessibility();
-                    for (int i = (int)minWealthLevel; i < wealthLevelsMinMax.y; i++)
+                    for (int i = (int)minWealthLevel; i <= wealthLevelsMinMax.y; i++)
                     {
                         partsAccessibilityPerWL[(GameSetupData.WealthLevels) i]++;
                         partsTechLevelSumPerWL[(GameSetupData.WealthLevels) i] += upgradePart.GetTechLevel();
@@ -88,12 +90,52 @@ namespace Reporting
                     }
                 }
 
-                for (int i = 0; i < wealthLevelsMinMax.y; i++)
+                // Calc TH Index per WL
+                for (int i = 0; i <= wealthLevelsMinMax.y; i++)
                 {
-                    thIndexPerWL[(GameSetupData.WealthLevels) i] = tmpThIndex[i] / (countThIndexes[i] == 0?1:countThIndexes[i]);
-                    aestheticThIndexPerWL[(GameSetupData.WealthLevels) i] = tmpAestheticThIndex[i] / (countAestheticThIndexes[i]==0?1:countAestheticThIndexes[i]);
+                    thIndexPerWL[(GameSetupData.WealthLevels) i] = countThIndexes[i] == 0 ? 0 : tmpThIndex[i] / countThIndexes[i];
+                    aestheticThIndexPerWL[(GameSetupData.WealthLevels) i] = countAestheticThIndexes[i]==0?0:tmpAestheticThIndex[i] / countAestheticThIndexes[i];
+                    Debug.Log("TH Index of "+((GameSetupData.WealthLevels) i)+" "+thIndexPerWL[(GameSetupData.WealthLevels) i]);
+                    Debug.Log("aesTH Index of "+((GameSetupData.WealthLevels) i)+" "+aestheticThIndexPerWL[(GameSetupData.WealthLevels) i]);
                 }
+                
+                // Calc TH Index
+                var currentPopulation = _player.gameSetupData.populationGrowthCurve.Evaluate(_timePeriod.GetYearsSinceStart(_player.gameSetupData));
+                //var populationPerWL = new Dictionary<GameSetupData.WealthLevels,int>();
+                Debug.Log("CurPop: "+currentPopulation);
+            
+                int thIndexAllSum = 0;
+                foreach (var kvp in _player.gameSetupData.populationWealthLevelPercentages)
+                {
+                    var wLPopulation = Mathf.FloorToInt(kvp.Value * currentPopulation);
+                    thIndexPerWL.TryGetValue(kvp.Key, out var wlThIndex);
+                    //populationPerWL.Add(kvp.Key, wLPopulation);
+                    thIndexAllSum += wLPopulation * wlThIndex;
+                    Debug.Log("Pop of "+kvp.Key+" "+wLPopulation+"; ThIndex: "+wlThIndex);
+                }
+            
+                thIndexTotalPopulation = Mathf.RoundToInt(thIndexAllSum / (wealthLevelsMinMax.y * currentPopulation));
+                Debug.Log("thIndexTotalPopulation "+thIndexTotalPopulation);
             }
         }
+
+        /*private int CalculateTHIndexTotalPopulation()
+        {
+            var index = 0;
+
+            var currentPopulation = _player.gameSetupData.populationGrowthCurve.Evaluate(_timePeriod.GetYearsSinceStart(_player.gameSetupData));
+            var populationPerWL = new Dictionary<GameSetupData.WealthLevels,int>();
+            
+            int thIndexAllSum = 0;
+            foreach (var kvp in _player.gameSetupData.populationWealthLevelPercentages)
+            {
+                populationPerWL.Add(kvp.Key, Mathf.FloorToInt(kvp.Value * currentPopulation));
+            }
+            
+            index = thIndexAllSum / wealthLevelsMinMax.y;
+            
+            
+            return index;
+        }*/
     }
 }

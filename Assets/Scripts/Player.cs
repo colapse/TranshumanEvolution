@@ -33,6 +33,28 @@ public class Player : MonoBehaviour
     [ShowInInspector]
     public int SpentMoneyAllTimePeriods => currentTimePeriod?.GetSpentMoneyToThisPeriod() ?? 0;
 
+    // Some general stats
+    
+    /* TODO
+     * Level of "legal" Government surveillance going on;
+     * 0=Emergency/Judge approved for individuals
+     * 1=allowed for certain risk areas/groups; Judge approve needed
+     * 2=Mass Surveillance; Constant surveillance on all;
+     */
+    [Range(0,2)]
+    public int govSurveillance = 0;
+    
+    /* TODO
+     * Level of "legal" "surveillance" in connection to commercial sector
+     * 0 = No access / Only local access
+     * 1 = anonymous data for online services can be collected by companie (Tracking, maps, ...)
+     * 2 = 
+     */
+    [Range(0,5)]
+    public int comSurveillance = 0;
+    
+    
+    
     public void AdvanceToNextTimePeriod()
     {
         //TODO
@@ -58,6 +80,17 @@ public class Player : MonoBehaviour
     public void InitData()
     {
         transhuman = FindObjectOfType<Transhuman>();
+
+        // Add default human parts
+        if (gameSetupData?.startHumanParts != null)
+        {
+            foreach (var humanPart in gameSetupData.startHumanParts)
+            {
+                var obtainedPart = new ObtainedUpgradePart(humanPart);
+                obtainedUpgradeParts.Add(obtainedPart);
+            }
+        }
+        
         UpdateTranshumanParts();
     }
 
@@ -108,11 +141,19 @@ public class Player : MonoBehaviour
         {
             techUpgrades.Add(techUpgrade);
 
+            ObtainedUpgradePart obtainedUpgradePart = null;
             if (techUpgrade.obtainUpgradePart && !HasObtainedUpgradePart(techUpgrade.upgradePart))
             {
-                var newObtainedUpgradePart = new ObtainedUpgradePart(techUpgrade.upgradePart);
-                obtainedUpgradeParts.Add(newObtainedUpgradePart);
+                obtainedUpgradePart = new ObtainedUpgradePart(techUpgrade.upgradePart);
+                
+                obtainedUpgradeParts.Add(obtainedUpgradePart);
             }
+            else
+            {
+                obtainedUpgradePart = obtainedUpgradeParts.FirstOrDefault(oup => oup.originalUpgradePart == techUpgrade.upgradePart);
+            }
+
+            obtainedUpgradePart?.techUpgrades.Add(techUpgrade);
 
             if (currentTimePeriod != null)
             {
@@ -152,7 +193,7 @@ public class Player : MonoBehaviour
     }
 
     [Button]
-    public void UpdateTranshumanParts()
+    public void UpdateTranshumanParts() // TODO
     {
         if (transhuman != null && obtainedUpgradeParts != null)
         {

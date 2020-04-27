@@ -9,7 +9,7 @@ using UnityEngine;
 public class GameSetupData : SerializedScriptableObject
 {
     // Order is important {Poorest, ... , Richest}
-    public enum WealthLevels{LowerClass = 0, MiddleClass = 1, UpperClass = 2}
+    public enum WealthLevels:int{LowerClass = 0, MiddleClass = 1, UpperClass = 2}
 
     public static Vector2Int GetWealthLevelsMinMax() // x=min, y=max
     {
@@ -22,6 +22,11 @@ public class GameSetupData : SerializedScriptableObject
         }
         
         return new Vector2Int(enumMinValue, enumMaxValue);
+    }
+
+    public static int GetWealthLevelsCount() // Returns amount of wealth levels
+    {
+        return Enum.GetNames(typeof(WealthLevels)).Length;
     }
 
     public string setupName;
@@ -39,10 +44,10 @@ public class GameSetupData : SerializedScriptableObject
     [FoldoutGroup("Path Setup")]
     public string resUpgradePartsPath = "ScriptableObjects/UpgradeParts";
     
-    [Tooltip("Population per year in millions. X0=Start Population.")]
+    [FoldoutGroup("Population Setup"), Tooltip("Population per year in millions. X0=Start Population.")]
     public AnimationCurve populationGrowthCurve;
-    [Tooltip("0=Poor, 1=Middle, 2=Wealthy, 3=Rich, 4=Superrich")]
-    public Dictionary<WealthLevels,float> populationWealthLevelPercentages; // Percentages
+    [FoldoutGroup("Population Setup"), Tooltip("0=Lower Class, 1=Middle Class, 2=Upper Class; Percentage value should sum up to 1.")]
+    public Dictionary<WealthLevels,float> populationWealthLevelPercentages; // Percentages 0-1
 
     [FoldoutGroup("Time Phase Settings")]
     public int maxTimePhases = 10;
@@ -89,6 +94,7 @@ public class GameSetupData : SerializedScriptableObject
     [Button, PropertyOrder(8),FoldoutGroup("Technology Settings")]
     public void LoadAllUpgradeParts() => upgradeParts = Resources.LoadAll<UpgradePart>(resUpgradePartsPath).ToList();
     [FoldoutGroup("Technology Settings"), PropertyOrder(9)] public List<UpgradePart> upgradeParts;
+    [FoldoutGroup("Technology Settings"), PropertyOrder(9)] public List<UpgradePart> startHumanParts;
 
     [FoldoutGroup("Technology Settings"), PropertyOrder(10)]
     public int maxTechBranchLevel = 10;

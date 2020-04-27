@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObtainedUpgradePart
 {
-        public UpgradePart originalUpgradePart;
-        public List<TechUpgrade> techUpgrades;
+        public readonly UpgradePart originalUpgradePart;
+        public readonly List<TechUpgrade> techUpgrades = new List<TechUpgrade>();
 
         public ObtainedUpgradePart(UpgradePart upgradePart)
         {
@@ -38,7 +38,7 @@ public class ObtainedUpgradePart
 
         public GameSetupData.WealthLevels GetMinWealthLevelAccessibility()
         {
-                return (GameSetupData.WealthLevels)Mathf.FloorToInt(GetWealthLevelCost());
+                return (GameSetupData.WealthLevels)Mathf.CeilToInt(GetWealthLevelCost());
         }
 
         public int GetTechLevel()

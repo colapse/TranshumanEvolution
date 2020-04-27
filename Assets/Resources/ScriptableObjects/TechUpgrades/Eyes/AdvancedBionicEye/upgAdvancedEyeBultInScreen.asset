@@ -108,7 +108,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b463755875158c3489fe2e20a83cf804, type: 2}
   upgradePart: {fileID: 11400000, guid: fe66aebf37ba65b47b8eee9b5ec80dc8, type: 2}
   obtainUpgradePart: 0
-  transhumanIndexChange: 1
+  transhumanIndexChange: 3
   aestheticTranshumanIndexChange: 1
+  securityChange: 0
+  connectivenessChange: 0
+  physicalAggressionThreatChange: 0
   minWealthLevelChange: 0.5
   partTechLevelChange: 1
