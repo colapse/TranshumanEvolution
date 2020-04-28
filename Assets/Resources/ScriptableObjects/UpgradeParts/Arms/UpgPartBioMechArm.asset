@@ -16,7 +16,7 @@ MonoBehaviour:
   upgradePartDescription: A bio mechanical prosthetic arm that has a very tight resemblence
     to a human arm. It's highly advanced sensory input from detected brain signals
     together with it's fine motorics allows a very natural movement.
-  upgradePartIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  upgradePartIcon: {fileID: 21300000, guid: 5d89e063f6cbd7e4089435ed562fbbc9, type: 3}
   upgradeCategory: {fileID: 11400000, guid: 6a84d799fc9c7594c90a8d08d6a649fd, type: 2}
   prefab: {fileID: 1298083858216553476, guid: 11588d31b2e1b3d478972565c3810278, type: 3}
   techLevel: 6

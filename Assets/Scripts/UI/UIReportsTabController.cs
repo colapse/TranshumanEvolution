@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Reporting;
+using Sirenix.OdinInspector;
 using UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,14 +14,45 @@ public class UIReportsTabController : MonoBehaviour
     public GameObject timePeriodButtonsContainer;
     public GameObject reportContentContainer;
 
+    // Transhuman Indexes
+    [FoldoutGroup("Transhuman Index Setup")]
+    public GameObject thIndexTitleContainer;
+    [FoldoutGroup("Transhuman Index Setup")]
     public GameObject overAllThIndexContainer;
+    [FoldoutGroup("Transhuman Index Setup")]
     public UIIndexBar overAllTHIndexBar;
+    [FoldoutGroup("Transhuman Index Setup")]
     public GameObject lowerClassThIndexContainer;
+    [FoldoutGroup("Transhuman Index Setup")]
     public UIIndexBar lowerClassTHIndexBar;
+    [FoldoutGroup("Transhuman Index Setup")]
     public GameObject middleClassThIndexContainer;
+    [FoldoutGroup("Transhuman Index Setup")]
     public UIIndexBar middleClassTHIndexBar;
+    [FoldoutGroup("Transhuman Index Setup")]
     public GameObject upperClassThIndexContainer;
+    [FoldoutGroup("Transhuman Index Setup")]
     public UIIndexBar upperClassTHIndexBar;
+    
+    // Aesthetic Transhuman Indexes
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public GameObject aesThIndexTitleContainer;
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public GameObject overAllAesThIndexContainer;
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public UIIndexBar overAllAesTHIndexBar;
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public GameObject lowerClassAesThIndexContainer;
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public UIIndexBar lowerClassAesTHIndexBar;
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public GameObject middleClassAesThIndexContainer;
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public UIIndexBar middleClassAesTHIndexBar;
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public GameObject upperClassAesThIndexContainer;
+    [FoldoutGroup("Aesthetic Transhuman Index Setup")]
+    public UIIndexBar upperClassAesTHIndexBar;
     
     public Text reportTitle;
     public Text reportText;
@@ -147,36 +179,76 @@ public class UIReportsTabController : MonoBehaviour
             reportText.text += timePeriod.report?.GetReportText(Report.ReportType.TechBranchResearch).GetReportText(timePeriod.report)??"";
         }
 
+        // Transhuman Indexes
+        thIndexTitleContainer?.SetActive(true);
         if (overAllTHIndexBar != null)
         {
-            overAllTHIndexBar.CurrentIndexPos = timePeriod.report?.thIndexTotalPopulation ?? 5;
             overAllThIndexContainer?.SetActive(true);
+            overAllTHIndexBar.CurrentIndexPos = timePeriod.report?.thIndexTotalPopulation ?? 0;
         }
         if (lowerClassTHIndexBar != null && timePeriod.report != null)
         {
+            lowerClassThIndexContainer?.SetActive(true);
             timePeriod.report.thIndexPerWL.TryGetValue(GameSetupData.WealthLevels.LowerClass,
                 out var thIndexLowerClass);
             lowerClassTHIndexBar.CurrentIndexPos = thIndexLowerClass;
-            lowerClassThIndexContainer?.SetActive(true);
         }
         if (middleClassTHIndexBar != null && timePeriod.report != null)
         {
+            middleClassThIndexContainer?.SetActive(true);
             timePeriod.report.thIndexPerWL.TryGetValue(GameSetupData.WealthLevels.MiddleClass,
                 out var thIndexMiddleClass);
             middleClassTHIndexBar.CurrentIndexPos = thIndexMiddleClass;
-            middleClassThIndexContainer?.SetActive(true);
         }
         if (upperClassTHIndexBar != null && timePeriod.report != null)
         {
+            upperClassThIndexContainer?.SetActive(true);
             timePeriod.report.thIndexPerWL.TryGetValue(GameSetupData.WealthLevels.UpperClass,
                 out var thIndexUpperClass);
             upperClassTHIndexBar.CurrentIndexPos = thIndexUpperClass;
-            upperClassThIndexContainer?.SetActive(true);
+        }
+        
+        // Aesthetic Transhuman Indexes
+        aesThIndexTitleContainer?.SetActive(true);
+        if (overAllAesTHIndexBar != null)
+        {
+            overAllAesThIndexContainer?.SetActive(true);
+            overAllAesTHIndexBar.CurrentIndexPos = timePeriod.report?.aesThIndexTotalPopulation ?? 0;
+        }
+        if (lowerClassAesTHIndexBar != null && timePeriod.report != null)
+        {
+            lowerClassAesThIndexContainer?.SetActive(true);
+            timePeriod.report.aestheticThIndexPerWL.TryGetValue(GameSetupData.WealthLevels.LowerClass,
+                out var aesThIndexLowerClass);
+            lowerClassAesTHIndexBar.CurrentIndexPos = aesThIndexLowerClass;
+        }
+        if (middleClassAesTHIndexBar != null && timePeriod.report != null)
+        {
+            middleClassAesThIndexContainer?.SetActive(true);
+            timePeriod.report.aestheticThIndexPerWL.TryGetValue(GameSetupData.WealthLevels.MiddleClass,
+                out var aesThIndexMiddleClass);
+            middleClassAesTHIndexBar.CurrentIndexPos = aesThIndexMiddleClass;
+        }
+        if (upperClassAesTHIndexBar != null && timePeriod.report != null)
+        {
+            upperClassAesThIndexContainer?.SetActive(true);
+            timePeriod.report.aestheticThIndexPerWL.TryGetValue(GameSetupData.WealthLevels.UpperClass,
+                out var aesThIndexUpperClass);
+            upperClassAesTHIndexBar.CurrentIndexPos = aesThIndexUpperClass;
         }
     }
 
     private void TimePeriodChanged(TimePeriod oldTimePeriod, TimePeriod newTimePeriod)
     {
+        StartCoroutine(TimePeriodChangedCR(oldTimePeriod, newTimePeriod));
+    }
+
+    private IEnumerator TimePeriodChangedCR(TimePeriod oldTimePeriod, TimePeriod newTimePeriod)
+    {
+        yield return new WaitForEndOfFrame();
         CreateTimePeriodButtons();
+        yield return new WaitForEndOfFrame();
+        LoadReport(oldTimePeriod);
+        yield return 0;
     }
 }

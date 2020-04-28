@@ -28,6 +28,7 @@ namespace Reporting
         public Dictionary<GameSetupData.WealthLevels, int> thIndexPerWL; // Averages of all parts
         public Dictionary<GameSetupData.WealthLevels, int> aestheticThIndexPerWL; // Averages of all parts
         public int thIndexTotalPopulation;
+        public int aesThIndexTotalPopulation;
         public Dictionary<GameSetupData.WealthLevels, int> partsAccessibilityPerWL; // # parts available per WL
         public Dictionary<GameSetupData.WealthLevels, int> partsTechLevelSumPerWL; // Highest TechLevel of available parts per WL
         
@@ -68,7 +69,7 @@ namespace Reporting
             }
             
             
-            availableParts = _player.obtainedUpgradeParts.Where(oup => oup.originalUpgradePart.transhumanIndex > 0).ToList();
+            availableParts = _player.obtainedUpgradeParts;//.Where(oup => oup.originalUpgradePart.transhumanIndex > 0).ToList();
             
             if (availableParts != null && availableParts.Count > 0)
             {
@@ -105,16 +106,20 @@ namespace Reporting
                 Debug.Log("CurPop: "+currentPopulation);
             
                 int thIndexAllSum = 0;
+                int aesThIndexAllSum = 0;
                 foreach (var kvp in _player.gameSetupData.populationWealthLevelPercentages)
                 {
                     var wLPopulation = Mathf.FloorToInt(kvp.Value * currentPopulation);
                     thIndexPerWL.TryGetValue(kvp.Key, out var wlThIndex);
+                    aestheticThIndexPerWL.TryGetValue(kvp.Key, out var wlAesThIndex);
                     //populationPerWL.Add(kvp.Key, wLPopulation);
                     thIndexAllSum += wLPopulation * wlThIndex;
-                    Debug.Log("Pop of "+kvp.Key+" "+wLPopulation+"; ThIndex: "+wlThIndex);
+                    aesThIndexAllSum += wLPopulation * wlAesThIndex;
+                    Debug.Log("Pop of "+kvp.Key+" "+wLPopulation+"; ThIndex: "+wlThIndex+"; aesThIndex: "+wlAesThIndex);
                 }
             
-                thIndexTotalPopulation = Mathf.RoundToInt(thIndexAllSum / (wealthLevelsMinMax.y * currentPopulation));
+                thIndexTotalPopulation = Mathf.CeilToInt(thIndexAllSum / currentPopulation); // RoundToInt
+                aesThIndexTotalPopulation = Mathf.CeilToInt(aesThIndexAllSum / currentPopulation);
                 Debug.Log("thIndexTotalPopulation "+thIndexTotalPopulation);
             }
         }

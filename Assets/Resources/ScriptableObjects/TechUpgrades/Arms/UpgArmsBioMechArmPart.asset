@@ -91,7 +91,7 @@ MonoBehaviour:
   upgradeDescription: A high-tech bio-mechanical arm which looks and feels almost
     like a real arm. The arm receives inputs directly from the brain. Furthermore
     it's stronger and more durable compared to its' predecessor.
-  upgradeIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  upgradeIcon: {fileID: 21300000, guid: 5d89e063f6cbd7e4089435ed562fbbc9, type: 3}
   requiredTechUpgrades: []
   upgradePart: {fileID: 11400000, guid: bfe76dc7baed8c84bb14fe947ee487f0, type: 2}
   obtainUpgradePart: 1

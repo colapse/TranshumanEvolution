@@ -91,7 +91,7 @@ MonoBehaviour:
   upgradeDescription: Research a prosthetic arm with a skin-like layer with a better
     resemblence of a human arm. The arm also has stronger motors than its' predecessor
     and enhanced sensory input.
-  upgradeIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  upgradeIcon: {fileID: 21300000, guid: 6cc071427cd231b42aef657819716cb9, type: 3}
   requiredTechUpgrades:
   - {fileID: 11400000, guid: d40edf572332ba244a5d100e04fbe57b, type: 2}
   upgradePart: {fileID: 11400000, guid: 0261da1b32706704c8174000dcdc81fe, type: 2}

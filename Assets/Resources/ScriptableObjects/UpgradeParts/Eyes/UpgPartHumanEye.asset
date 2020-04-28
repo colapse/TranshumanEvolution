@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradePartName: Human Eye
   upgradePartDescription: A natural human eye.
-  upgradePartIcon: {fileID: 0}
+  upgradePartIcon: {fileID: 21300000, guid: 99332e2ad210ff343bb26f0ca1b3df2c, type: 3}
   upgradeCategory: {fileID: 11400000, guid: 06529e576c0c7df48ab0c795f3f46996, type: 2}
   prefab: {fileID: 235451718467187936, guid: 785ffaa2ac207fa46bb0af8afb5ea397, type: 3}
   techLevel: 0
   minWealthLevel: 0
   transhumanIndex: 0
   aestheticTranshumanIndex: 0
+  security: 0
+  connectiveness: 0
+  physicalAggressionThreat: 0

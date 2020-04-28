@@ -48,8 +48,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TranshumanCategory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIMainMenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WorldManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIUpgradeTypeController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgradeCategory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIHelpTabController.cs" />
@@ -65,20 +63,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradesTabController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ToolTip.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradeController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextAccessibilityPerWL.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/ReportTextTechBranchResearch.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TimePeriod.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIReportsTabController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIIndexBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObtainedUpgradePart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameSetupData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/Report.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpgradePart.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TechUpgrade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Transhuman.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIIndexBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Reporting/Report.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIReportsTabController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITechUpgradeController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIUpgradeTypeController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WorldManager.cs" />
       </list>
     </option>
   </component>
@@ -136,6 +136,8 @@
       <workItem from="1587114746199" duration="10106000" />
       <workItem from="1587233552421" duration="30683000" />
       <workItem from="1587833158251" duration="20807000" />
+      <workItem from="1587983986480" duration="6466000" />
+      <workItem from="1588064160901" duration="2482000" />
     </task>
     <servers />
   </component>

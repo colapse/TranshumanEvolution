@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -57,7 +58,6 @@ public class Player : MonoBehaviour
     
     public void AdvanceToNextTimePeriod()
     {
-        //TODO
         TimePeriod newTimePeriod = new TimePeriod
         {
             previousPeriod = currentTimePeriod, newAddedBudget = gameSetupData.budgetPerPhase
@@ -74,6 +74,7 @@ public class Player : MonoBehaviour
 
         var oldTimePeriod = currentTimePeriod;
         currentTimePeriod = newTimePeriod;
+        
         TimePeriodChangedEvent?.Invoke(oldTimePeriod,currentTimePeriod);
     }
 

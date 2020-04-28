@@ -102,11 +102,14 @@ MonoBehaviour:
       Data: 
   upgradeName: Enhanced Bionic Eye
   upgradeDescription: Unlock an enhanced bionic eye.
-  upgradeIcon: {fileID: 0}
+  upgradeIcon: {fileID: 21300000, guid: d6f049086d4286a4c9cab4661449d7c3, type: 3}
   requiredTechUpgrades: []
   upgradePart: {fileID: 11400000, guid: 09bb8231ca43b0f41806a54864f2880f, type: 2}
   obtainUpgradePart: 1
   transhumanIndexChange: 0
   aestheticTranshumanIndexChange: 0
+  securityChange: 0
+  connectivenessChange: 0
+  physicalAggressionThreatChange: 0
   minWealthLevelChange: 0
   partTechLevelChange: 0

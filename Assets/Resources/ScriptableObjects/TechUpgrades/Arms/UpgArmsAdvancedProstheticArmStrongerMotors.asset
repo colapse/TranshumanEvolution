@@ -139,5 +139,5 @@ MonoBehaviour:
   securityChange: 0
   connectivenessChange: 0
   physicalAggressionThreatChange: 2
-  minWealthLevelChange: 0.5
+  minWealthLevelChange: 1
   partTechLevelChange: 2

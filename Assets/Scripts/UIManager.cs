@@ -69,6 +69,14 @@ public class UIManager : MonoBehaviour
     private void TimePeriodChanged(TimePeriod arg1, TimePeriod arg2)
     {
         ShowReportTab();
+        
+        // Check current Time Period / if last & disable btn
+        if (arg2.GetCurrentTimePeriodLevel() >= _player.gameSetupData.maxTimePhases)
+        {
+            var btnNextPeriod = GameObject.FindWithTag("NextTimePeriodButton")?.GetComponent<Button>();
+            if (btnNextPeriod != null)
+                btnNextPeriod.enabled = false;
+        }
     }
 
     private void InitTopBarContainer()

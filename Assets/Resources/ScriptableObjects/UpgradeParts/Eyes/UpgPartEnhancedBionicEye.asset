@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradePartName: Enhanced Bionic Eye
   upgradePartDescription: This enhanced version of the bionic eye sharpens the vision
     compared to a standard eye and tops early versions of bionic eyes in many ways.
-  upgradePartIcon: {fileID: 0}
+  upgradePartIcon: {fileID: 21300000, guid: d6f049086d4286a4c9cab4661449d7c3, type: 3}
   upgradeCategory: {fileID: 11400000, guid: 06529e576c0c7df48ab0c795f3f46996, type: 2}
   prefab: {fileID: 6909242724891627848, guid: 43385e92e7800664cb2102fa8d1e1776, type: 3}
   techLevel: 4

@@ -80,7 +80,6 @@ MonoBehaviour:
   upgradeIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   requiredTechUpgrades:
   - {fileID: 11400000, guid: cac4b3ec63a59e04ea9c011a5d48e696, type: 2}
-  - {fileID: 0}
   upgradePart: {fileID: 11400000, guid: bfe76dc7baed8c84bb14fe947ee487f0, type: 2}
   obtainUpgradePart: 0
   transhumanIndexChange: 0
@@ -88,5 +87,5 @@ MonoBehaviour:
   securityChange: 0
   connectivenessChange: 0
   physicalAggressionThreatChange: 0
-  minWealthLevelChange: -2
+  minWealthLevelChange: -1
   partTechLevelChange: 0

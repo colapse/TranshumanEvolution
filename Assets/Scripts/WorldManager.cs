@@ -9,6 +9,7 @@ public class WorldManager : MonoBehaviour
     public Player player;
 
     public UIManager uiManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,15 @@ public class WorldManager : MonoBehaviour
         }
         player.gameSetupData = gameSetupData;
         player.InitData();
+
+        Canvas canvas = FindObjectOfType<Canvas>();
+        Vector3 newCamPos = Camera.main.transform.position;
+        newCamPos.x = player.transhuman.transform.position.x; /*- canvas.pixelRect.width/2 + 200;*/
+        //Camera.main.transform.position = newCamPos;
+        var screenPoint = new Vector3(100,canvas.pixelRect.height, Camera.main.nearClipPlane);
+        newCamPos.x -= newCamPos.x-Camera.main.ScreenToWorldPoint(screenPoint).x;
+        
+        Camera.main.transform.position = newCamPos;
         
         uiManager?.InitUI();
         

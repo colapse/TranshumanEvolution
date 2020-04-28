@@ -914,9 +914,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a505f32fe3a10c46b3233f12f9ac5ec, type: 2}
   techUpgradeCategories:
   - {fileID: 11400000, guid: 6a84d799fc9c7594c90a8d08d6a649fd, type: 2}
-  - {fileID: 11400000, guid: 8b3c88a848c4a3d418030ce502da458c, type: 2}
   - {fileID: 11400000, guid: 06529e576c0c7df48ab0c795f3f46996, type: 2}
-  - {fileID: 11400000, guid: b2d422e99724eda4aa2b4164194b59b3, type: 2}
   techUpgradeTypes:
   - {fileID: 11400000, guid: 5b473a8bca8c2c04a8214dcea9f20ba3, type: 2}
   - {fileID: 11400000, guid: df999851d9d36e34aa036876f93cc405, type: 2}

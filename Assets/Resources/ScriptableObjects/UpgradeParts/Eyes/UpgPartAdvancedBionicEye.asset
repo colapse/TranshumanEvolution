@@ -16,7 +16,7 @@ MonoBehaviour:
   upgradePartDescription: This bionic eye is technologically highly advanced and
     is made largely out of organic materials giving it a humane look by default and
     integrates smoothly. It has largely enhanced vision, visual stream filtering.
-  upgradePartIcon: {fileID: 0}
+  upgradePartIcon: {fileID: 21300000, guid: b35aa3e5bcafb1e4bad4181116ed6ca9, type: 3}
   upgradeCategory: {fileID: 11400000, guid: 06529e576c0c7df48ab0c795f3f46996, type: 2}
   prefab: {fileID: 8240705359189990624, guid: defa3d79e48170847af433db05e77362, type: 3}
   techLevel: 6

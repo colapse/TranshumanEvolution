@@ -47,7 +47,6 @@ namespace UI
             
             newKnobPos.x = indexBarPartSize * CurrentIndexPos - indexBarPartHalfSize;
             indexBarKnob.anchoredPosition = newKnobPos;
-            Debug.Log("Updated Knob Pos; CurInd; "+CurrentIndexPos+"... posx: "+newKnobPos);
         }
     }
 }

@@ -76,7 +76,7 @@ MonoBehaviour:
       Data: 
   upgradeName: Prosthethic Arm
   upgradeDescription: Research a prosthetic arm. Replace lost arms.
-  upgradeIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  upgradeIcon: {fileID: 21300000, guid: fa9540cf1b5070c4992350beef55f7e3, type: 3}
   requiredTechUpgrades: []
   upgradePart: {fileID: 11400000, guid: 293e46bc1b95971479fba5526020f7cb, type: 2}
   obtainUpgradePart: 1
